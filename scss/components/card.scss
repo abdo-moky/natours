@@ -1,4 +1,17 @@
+.card-container{
+    display: flex;
+    justify-content: space-between;
+    @media only screen and (max-width: 50em){
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
 .card{
+    flex: 0 0 30%;
+    @media only screen and (max-width: 50em){
+        flex: 0 0 51%;
+        margin-bottom: 6rem;
+    }
     height: 51rem;
     position: relative;
     perspective: 200rem;

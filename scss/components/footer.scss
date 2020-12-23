@@ -6,7 +6,15 @@
     @include respond(tab-port) {
         padding: 8rem 0;
     }
+    &__content{
+        display: flex;
+        justify-content: space-between;
+        @include respond(phone) {
+            flex-wrap: wrap;
+            justify-content: center;
 
+        }
+    }
     &__logo-box {
         text-align: center;
         margin-bottom: 8rem;
@@ -19,13 +27,14 @@
         height: 12rem;
     }
     &__navigation {
+       flex: 0 0 40%;
        border-top: 1px solid $color-grey-dark;
        padding-top: 2rem;
        display: inline-block;
-       @include respond(tab-port) {
-        width: 100%;
-        text-align: center;
-    }
+       @include respond(phone) {
+        flex: 0 0 51%;
+        margin-bottom: 6rem;
+       }
     }
     &__list {
         list-style: none;
@@ -58,14 +67,12 @@
     }
 
     &__copyright {
+        flex: 0 0 40%;
         border-top: 1px solid $color-grey-dark;
         padding-top: 2rem;
-        width: 80%;
-        float: right;
 
-        @include respond(tab-port) {
-            width: 100%;
-            float: none;
+        @include respond(phone) {
+            flex: 0 0 51%;
         }
     }
 }

@@ -1,4 +1,10 @@
+
 .feature-box{
+    flex: 0 0 22%;
+    @include respond(phone) {
+        flex: 0 0 60%;
+        margin-bottom: 6rem;
+    }
     background-color:rgba($color-white, 0.8);
     border-radius: 3px;
     text-align: center;

@@ -5,6 +5,27 @@
     @include respond(tab-port) {
         padding: 20rem 0;
     }
+    &__box{
+        display: flex;
+        justify-content: space-between;
+        @include respond(phone) {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        &--text{
+            flex: 0 0 45%;
+            @include respond(phone) {
+                flex: 0 0 70%;
+            }
+        }
+        &--imgs{
+            flex: 0 0 45%;
+            @include respond(phone) {
+                flex: 0 0 70%;
+                margin-top: 6rem;
+            }
+        }
+    }
 }
 .section-feature{
     padding: 20rem 0;
@@ -20,7 +41,15 @@
          @include respond(tab-port) {
             padding: 10rem 0;
         }
-    
+    &__container{
+        display: flex;
+        justify-content: space-between;
+        @include respond(phone) {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+    }
 }
 .section-tours{
     padding: 20rem 0 15rem 0;

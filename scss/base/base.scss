@@ -18,13 +18,28 @@
         }
     }
     body{
-        
         box-sizing: border-box;
         padding: 2.5rem;
         @include respond(tab-port) {
             padding: 0;
         }
 
+    }
+    .container{
+        max-width: 110rem;
+        margin: auto;
+        @media only screen and (max-width: 62.5em){
+            max-width: 90rem;
+        }
+        @include respond(tab-port) {
+            max-width: 80rem;
+        }
+        @include respond(phone) {
+            max-width: 65rem;
+        }
+        @include respond(small-phone) {
+            max-width: 50rem;
+        }
     }
     ::selection{
         background-color: $primary-color;
